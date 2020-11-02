@@ -1,0 +1,90 @@
+@import 'colum.scss';
+@import 'grid.css';
+@font-face{
+	font-family:"Pyidaungsu";
+	src:url(./../fonts/Pyidaungsu-1.8_Bold.ttf) format('embedded-opentype'),
+	url(./../fonts/Pyidaungsu-1.8_Regular.ttf) format('opentype');
+}
+*{
+  font-family: "Arial","Pyidaungsu"!important;
+}
+body {
+    margin: 0;    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } 
+  a{
+      text-decoration: none;
+      color:inherit;
+      &:hover &p{
+        text-decoration: underline;
+      }
+  }
+ 
+  hr{
+    opacity:0.2;
+    color:#999;
+  }
+  .mxy,._mxy>*{
+    margin: 10px; 
+  }
+  .mx,._mx>*{
+    margin: 0px 10px;
+  }
+  .my,._my>*{
+    margin:10px 0px
+  }
+  
+  .pxy,._pxy>*{
+    padding: 10px;
+  }
+  .px,._px>*{
+    padding: 0px 10px;
+  }
+  .py,._py>*{
+    padding: 10px 0px;
+  }
+  
+  ._list>*{
+    display:table;
+  }
+  
+
+.flex,._flex>*{
+  display:flex;
+}
+.flex_be,._flex_be>*{
+  display: flex;
+  justify-content: space-between;
+}
+.wrap{
+  flex-wrap: wrap;
+}
+.f1,._f1>*{
+  flex:1;
+}
+.f2,._f2>*{
+  flex:2;
+}
+
+/* Designing for scroll-bar */ 
+::-webkit-scrollbar { 
+  width: 6px; 
+} 
+
+/* Track */ 
+::-webkit-scrollbar-track { 
+  background: rgba(150, 150, 150, 0.3); 
+  border-radius: 0px; 
+} 
+
+/* Handle */ 
+::-webkit-scrollbar-thumb { 
+  background: rgba(150, 150, 150, 0.3); 
+  border-radius: 0px; 
+} 
+
+/* Handle on hover */ 
+::-webkit-scrollbar-thumb:hover { 
+  background: #555; 
+}

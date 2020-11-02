@@ -1,0 +1,48 @@
+$nav_height:0px;
+nav{
+    // height:$nav_height;
+    position:relative;
+    top:0;
+    z-index: 99;
+}
+.Colums{
+    display:flex;
+    min-height:100vh;
+    .sticky{
+        padding-top: $nav_height;
+        >*{
+            height:calc(100vh - #{$nav_height});
+            
+            overflow-y:auto;
+            position: sticky;
+            top:$nav_height;
+            
+            &::-webkit-scrollbar-track { 
+                background: transparent; 
+            } 
+
+            /* Handle */ 
+            &::-webkit-scrollbar-thumb { 
+                background: transparent; 
+            } 
+
+            /* Handle on hover */ 
+            &:hover{
+                /* Handle */ 
+                &::-webkit-scrollbar-thumb { 
+                    background: rgba(150, 150, 150, 0.3); 
+                } 
+                &::-webkit-scrollbar-thumb:hover { 
+                    background: #555; 
+                }
+            }
+            
+            >*{margin:10px}
+        }
+    }
+    .content{
+        flex:1;
+        min-height: 100vh;
+        padding-top: $nav_height;
+    }
+}
